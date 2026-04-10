@@ -69,3 +69,18 @@ def test_get_current_user(client):
     assert response.status_code == 200
     data = response.json()
     assert data["email"] == "test@example.com"
+
+
+def test_register_user_does_not_grant_admin_role_from_email(client):
+    """Registration must not infer admin privileges from email contents."""
+    response = client.post(
+        "/auth/register",
+        json={
+            "name": "Admin Looking User",
+            "email": "admin-looking-user@example.com",
+            "password": "testpassword123"
+        }
+    )
+    assert response.status_code == 201
+    data = response.json()
+    assert data["role"] != "admin"
