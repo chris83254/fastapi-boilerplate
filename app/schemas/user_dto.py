@@ -1,16 +1,25 @@
-from pydantic import BaseModel, EmailStr
-from typing import Optional
 from datetime import datetime
+from typing import Annotated
+
+from pydantic import BaseModel, EmailStr, StringConstraints
+
+UserName = Annotated[
+    str,
+    StringConstraints(strip_whitespace=True, min_length=1, max_length=100),
+]
+
 
 class UserCreateDTO(BaseModel):
-    name: str
+    name: UserName
     email: EmailStr
     password: str
 
+
 class UserUpdateDTO(BaseModel):
-    name: Optional[str] = None
-    email: Optional[EmailStr] = None
-    password: Optional[str] = None
+    name: UserName | None = None
+    email: EmailStr | None = None
+    password: str | None = None
+
 
 class UserResponse(BaseModel):
     id: int
